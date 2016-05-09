@@ -1,3 +1,3 @@
 ## To do list
 
-[ ] - learn filter and sorting
+- [ ] learn filter and sorting
