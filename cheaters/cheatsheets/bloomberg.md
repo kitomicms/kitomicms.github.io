@@ -6,6 +6,7 @@ Command|Description
 --|--
 WSRC | Warrent Search
 HDS | who is holding
+WEI | global market
 |
 sth | sth
 
