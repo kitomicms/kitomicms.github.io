@@ -7,6 +7,7 @@ Command|Description
 WSRC | Warrent Search
 HDS | who is holding
 SI | short interest
+WEI | global market
 |
 sth | sth
 
