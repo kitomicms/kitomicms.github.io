@@ -6,6 +6,7 @@ Command|Description
 --|--
 WSRC | Warrent Search
 HDS | who is holding
+SI | short interest
 |
 sth | sth
 
