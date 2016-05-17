@@ -12,3 +12,8 @@ df['column_name'].unique() | display unique list
 df[df['column_name'] == True] | filter
 df[['column1_name','column2_name']] | display two or more columns
 df.sort_values(by=['columns_name'],ascending=[True/False]) | sort by value
+
+
+String manupulation|Description
+--|--
+str.strip() | remove all the white space
