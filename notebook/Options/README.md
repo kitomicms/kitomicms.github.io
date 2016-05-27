@@ -14,3 +14,6 @@
 - [ ] get the xpath
 
 #### For a specific price, display relative calls and puts
+
+#### to be explored
+http://stackoverflow.com/questions/27694221/using-python-libraries-to-plot-two-horizontal-bar-charts-sharing-same-y-axis
