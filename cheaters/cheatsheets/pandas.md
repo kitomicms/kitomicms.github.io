@@ -19,6 +19,7 @@ String manupulation|Description
 str.strip() | remove all the white space
 pd.to_numeric(xxx,errors="coerce") | force convert to number
 str.replace(",","") | replace "," to ""
+str.index(" ") | return the character position
 
 list manupulation|Description
 --|--
