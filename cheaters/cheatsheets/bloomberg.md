@@ -16,3 +16,7 @@ Indicator|Description
 Fund flow | displayed in security/study
 |
 sth | sth
+
+Review|Description
+--|--
+WIRP | Interate possibility
