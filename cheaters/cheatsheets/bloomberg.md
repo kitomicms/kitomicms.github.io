@@ -20,3 +20,7 @@ sth | sth
 Review|Description
 --|--
 WIRP | Interate possibility
+
+Analysis|Description
+--|--
+HS | Spread Analysis
