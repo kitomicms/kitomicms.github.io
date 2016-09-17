@@ -12,3 +12,11 @@ James Simons
 
 
 Osborne
+
+
+-----
+https://www.quantstart.com/advanced-algorithmic-trading-ebook
+
+https://www.amazon.com/gp/product/052169468X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=052169468X&linkCode=as2&tag=quant0f-20
+
+https://www.google.com.hk/search?q=Michael+Halls-Moore&oq=Michael+Halls-Moore&aqs=chrome..69i57&sourceid=chrome&ie=UTF-8
