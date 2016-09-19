@@ -27,3 +27,9 @@ Bond
 
 The Strategic Bond Investor : Strategies and Tools to Unlock the Power of the Bond Market
 
+---
+
+Trading
+
+周間日操作法
+http://www.books.com.tw/products/0010270058
