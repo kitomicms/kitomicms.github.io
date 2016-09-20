@@ -1,5 +1,6 @@
 Benoit Mandelbrot
 分形
+fractal geometry
 
 Vilfredo Pareto,
 
