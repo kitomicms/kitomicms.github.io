@@ -14,6 +14,11 @@ James Simons
 
 Osborne
 
+---
+
+Kelly Criterion/Kelly formula
+
+https://en.wikipedia.org/wiki/John_Larry_Kelly,_Jr.
 
 -----
 https://www.quantstart.com/advanced-algorithmic-trading-ebook
