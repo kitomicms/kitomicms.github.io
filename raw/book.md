@@ -13,9 +13,13 @@ James Simons
 
 
 Osborne
-
+分佈 Cauchy distribution
 ---
 
+Modelling
+hidden Markov model (used by Jim Simons, Renaissance Technologies)
+
+---
 Kelly Criterion/Kelly formula
 
 https://en.wikipedia.org/wiki/John_Larry_Kelly,_Jr.
