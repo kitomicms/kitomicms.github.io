@@ -1,0 +1,55 @@
+DTOP                                                       HKEX - DCASS                                          RUN DATE :  20OCT16
+                               DAILY TRADING ACTIVITY & OPEN POSITIONS DETAIL - FUTURES (BY MARKET)              RUN TIME : 19:29:48
+                                                                                                                 PAGE     :        1
+REPORT DATE     : 20OCT16   
+CLEARINGHOUSE   : HKCC 
+
+MARKET          : HSI   - HANG SENG FUTURES & OPTIONS     
+UNDERLYING      : HSI   
+
+   SERIES              GROSS             NET          NET CHANGE            T/O             DEAL        SETTLE PRICE   PRICE CHANGE
+-------------     ---------------  ---------------  ----------------  ---------------  ---------------  ------------   -------------
+HSI    OCT 16             138,211           44,164               772           93,283           59,154        23,400             121
+HSI    NOV 16              10,227            8,327             1,581            2,860              316        23,394             118
+HSI    DEC 16              13,175            9,415               149              418              144        23,411             113
+HSI    MAR 17               1,892            1,557               107              164               54        23,411             122
+                  ---------------  ---------------  ----------------  ---------------  ---------------
+HSIFUT     TOTAL           163505            63463              2609            96725            59668
+                  ===============  ===============  ================  ===============  ===============
+
+
+
+NOTE:
+
+"GROSS"        = EITHER THE TOTAL NUMBER OF LONG OR THE TOTAL NUMBER OF SHORT POSITIONS IN A CONTRACT HELD BY ALL PARTICIPANTS IN
+                    THE MARKET
+
+"NET"          = EITHER THE TOTAL NUMBER OF THE NET LONG OR THE TOTAL NUMBER OF NET SHORT POSITION IN A CONTRACT HELD BY ALL MARKET
+                    PARTICIPANTS. IT IS CALCULATED BY NETTING THE LONG AND SHORT POSITIONS IN A PARTICULAR CONTRACT HELD IN ALL ITS 
+                    ACCOUNTS BY EACH PARTICIPANT AND THEN SUM ALL NET LONG OR NET SHORT ACROSS ALL PARTICIPANTS IN THE MARKET.
+
+"NET CHANGE"   = THE CHANGE OF "NET" BETWEEN THE CURRENT TRADE DAY AND THE PREVIOUS TRADE DAY 
+
+"T/O"          = THE NUMBER OF CONTRACTS TRADED IN THE MARKET
+
+"DEAL"         = THE NUMBER OF MATCHED ORDERS IN THE MARKET
+
+"SETTLE PRICE" = THE SETTLEMENT PRICE OF THE SERIES ON THE CURRENT TRADE DAY
+
+"PRICE CHANGE" = THE CHANGE OF SETTLEMENT PRICE BETWEEN THE CURRENT TRADE DAY AND THE PREVIOUS TRADE DAY
+
+
+                                                       ***END OF REPORT***
+
+
+
+
+
+
+
+
+
+
+
+
+
