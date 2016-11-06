@@ -9,6 +9,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 import datetime
 #https://www.hkex.com.hk/chi/cbbc/newissue/newlaunch_c.htm
+import functions
 
 
 # In[2]:
@@ -18,7 +19,7 @@ thepage_cbbcs = urllib.urlopen(url_cbbcs)
 soup_cbbcs = bs(thepage_cbbcs,"html.parser")
 
 
-# In[3]:
+# In[27]:
 
 records = []
 for tr in soup_cbbcs.findAll("tr"):
@@ -40,76 +41,68 @@ df = pd.DataFrame(data=records)
 df.columns = ['STOCK CODE', 'NAME','LOT','EXPIRY']
 df['LOT'] = df['LOT'].str.replace(',','').astype('int')
 df['EXPIRY'] = df['EXPIRY'].apply(lambda x:datetime.datetime.strptime(x, '%d/%m/%Y'))
+df['STOCK CODE'] = df['STOCK CODE'].astype('int')
 
 
-# In[5]:
-
-def find_between(s, first,last):
-    try:
-        start = s.index( first ) + len( first )
-        end = s.index( last, start )
-        return s[start:end]
-    except ValueError:
-        return ""
-    
-def find_between2(s, start, end):
-    return (s.split(start))[1].split(end)[0]
-
-
-
-# In[44]:
-
-def cbbc_loop(cbbcs):
-    result = []
-    for cbbc in cbbcs:
-        url_cbbc = "".join(str(v) for v in ["http://www.hkex.com.hk/eng/invest/company/profile_page_e.asp?WidCoID=" , cbbc , "&WidCoAbbName=&Month=&langcode=e"])
-        thepage_cbbc = urllib.urlopen(url_cbbc)
-        soup_cbbc = bs(thepage_cbbc,"html.parser")
-
-        records_cbbc = []
-        for tr in soup_cbbc.findAll("tr"):
-            trs = tr.findAll("td")
-            record_cbbc = []
-            try:
-                record_cbbc.append((''.join(trs[0].text.split())).strip())
-                records_cbbc.append(record_cbbc)
-
-            except:
-                pass
-        
-        result.append(find_between(str(records_cbbc[0]),'UnderlyingAssetCode:','UnderlyingAssetPrice'))
-    return result
-
-
-# In[64]:
+# In[28]:
 
 df2 = df
-df2.loc[:,'Underlying Quote'] = pd.Series(cbbc_loop(df2['STOCK CODE']),len(df2))
+
+#df2.loc[:,'Underlying Quote'] = pd.Series(cbbc_loop(df2['STOCK CODE']),len(df2))
 
 
-# In[37]:
+# In[29]:
 
-print cbbc_info('60000')
-
-
-# In[39]:
-
-df3 = df2.head()
+df2.head()
 
 
-# In[61]:
+# In[30]:
 
-foo = cbbc_loop(df3['STOCK CODE'])
-df3.loc[:,'Q'] = pd.Series(foo,range(0,len(df3)))
-#pd.Series(np.random.randn(sLength))                        
+xl = pd.ExcelFile("pandas_simple.xlsx")
 
-
-# In[63]:
-
-df2
+excel_result = xl.parse("Sheet2")
+excel_result.tail()
 
 
-# In[ ]:
+# In[45]:
+
+#[Task] Find out what is outstanding
+
+len(excel_result[excel_result['w'] == 'None'])
 
 
+# In[46]:
+
+outstanding = excel_result['STOCK CODE'][excel_result['w']=='None']
+outstanding.head()
+
+
+# In[48]:
+
+#foo = cbbc_loop(df3['STOCK CODE'])
+#df3.loc[:,'Q'] = pd.Series(foo,range(0,len(df3)))
+functions.cbbc_loop(outstanding[0:10])
+
+
+#[Next time] Next step how to update value of filtered result
+
+
+# In[69]:
+
+#boo = cbbc_loop(df2['STOCK CODE'][0:499])
+
+
+# In[138]:
+
+# Create a Pandas dataframe from some data.
+df3 = df2[['STOCK CODE','Quote']]
+
+# Create a Pandas Excel writer using XlsxWriter as the engine.
+writer = pd.ExcelWriter('pandas_simple.xlsx', engine='xlsxwriter')
+
+# Convert the dataframe to an XlsxWriter Excel object.
+df_new.to_excel(writer, sheet_name='Sheet2')
+
+# Close the Pandas Excel writer and output the Excel file.
+writer.save()
 

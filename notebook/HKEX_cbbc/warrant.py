@@ -9,16 +9,17 @@ import requests
 from bs4 import BeautifulSoup as bs
 import datetime
 #https://www.hkex.com.hk/chi/cbbc/newissue/newlaunch_c.htm
+import functions
 
 
-# In[3]:
+# In[2]:
 
 url_cbbcs = 'http://www.hkex.com.hk/chi/market/sec_tradinfo/stockcode/eisdwarr_c.htm'
 thepage_cbbcs = urllib.urlopen(url_cbbcs)
 soup_cbbcs = bs(thepage_cbbcs,"html.parser")
 
 
-# In[4]:
+# In[9]:
 
 records = []
 for tr in soup_cbbcs.findAll("tr"):
@@ -42,14 +43,29 @@ df['LOT'] = df['LOT'].str.replace(',','').astype('int')
 df['EXPIRY'] = df['EXPIRY'].apply(lambda x:datetime.datetime.strptime(x, '%d/%m/%Y'))
 
 
-# In[5]:
+# In[15]:
 
-df.size
+df2 = df
 
 
-# In[6]:
+# In[16]:
 
-df.head()
+df2['Quote'] = df2['NAME'].apply(lambda x: functions.find_between(x,'WidCoID=','&WidCoAbbName'))
+
+
+# In[17]:
+
+df
+
+
+# In[8]:
+
+df
+
+
+# In[12]:
+
+df
 
 
 # In[ ]:
