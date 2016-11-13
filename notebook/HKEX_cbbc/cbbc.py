@@ -106,3 +106,13 @@ df_new.to_excel(writer, sheet_name='Sheet2')
 # Close the Pandas Excel writer and output the Excel file.
 writer.save()
 
+
+# In[1]:
+
+df
+
+
+# In[ ]:
+
+
+
